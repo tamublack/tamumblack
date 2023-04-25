@@ -1,11 +1,6 @@
-import os
+#!/bin/bash
+#set permission 444 to file
+chmod 444 README.md
 
-# tentukan path file yang ingin diubah izinnya
-file_path = '/home/woha/web/donggobolo-woha.bimakab.go.id/public_html/README.md'
-
-# set izin file ke 444
-os.chmod(file_path, 0o444)
-
-# cek apakah izin file sudah diubah ke 444
-file_stat = os.stat(file_path)
-print(oct(file_stat.st_mode)[-3:]) # output: 444
+#set immutable attribute to file
+chattr +i README.md
