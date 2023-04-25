@@ -1,6 +1,0 @@
-#!/bin/bash
-#set permission 444 to file
-chmod 444 README.md
-
-#set immutable attribute to file
-chattr +i README.md
